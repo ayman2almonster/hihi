@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "*";
-var adminprefix = '*'
+var prefix = "!";
+var adminprefix = '!'
 const developers = ["516682726951092235"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
@@ -9,22 +9,22 @@ client.on('message', message => {
      
   if (message.content.startsWith(adminprefix + 'setg')) {
     client.user.setGame(argresult);
-      message.channel.send(`:white_check_mark:    ${argresult}**`)
+      message.channel.send(`Adam    ${argresult}**`)
   } else
      if (message.content === (adminprefix + "leave")) {
     message.guild.leave();        
   } else  
   if (message.content.startsWith(adminprefix + 'setw')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.send(`:white_check_mark:    ${argresult}**`)
+      message.channel.send(`Adam   ${argresult}**`)
   } else
   if (message.content.startsWith(adminprefix + 'setl')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.send(`:white_check_mark:    ${argresult}**`)
+      message.channel.send(`Adam    ${argresult}**`)
   } else
   if (message.content.startsWith(adminprefix + 'sets')) {
     client.user.setGame(argresult, "https://www.twitch.tv/One");
-      message.channel.send(`:white_check_mark: `)
+      message.channel.send(`Adam`)
   }
   if (message.content.startsWith(adminprefix + 'setname')) {
   client.user.setUsername(argresult).then
